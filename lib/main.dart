@@ -15,7 +15,20 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Application'),
       ),
-      body: Text('Hello World!'),
+      body: Align(
+        alignment: Alignment.topRight,
+        child: Container(
+          width: double.infinity,
+          height: 100,
+          margin: EdgeInsets.all(30),
+          padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+          decoration: BoxDecoration(
+            color: Colors.brown,
+            border: Border.all(width: 10,color: Colors.redAccent)
+          ),
+          child: Text('Text in box'),
+        ),
+      ),
       bottomNavigationBar: BottomAppBar(
           child: Container(
         width: double.infinity,
@@ -28,7 +41,7 @@ class MyApp extends StatelessWidget {
           children: [
             Icon(Icons.phone),
             Icon(Icons.message),
-            Icon(Icons.info),
+            Icon(Icons.contact_page),
           ],
         ),
       )),
