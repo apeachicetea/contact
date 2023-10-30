@@ -10,41 +10,104 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // 내 자식 위젯의 기준점을 중앙으로 설정해주는 Center()
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text('Application'),
-      ),
-      body: Align(
-        alignment: Alignment.topRight,
-        child: Container(
-          width: double.infinity,
-          height: 100,
-          margin: EdgeInsets.all(30),
-          padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-          decoration: BoxDecoration(
-            color: Colors.brown,
-            border: Border.all(width: 10,color: Colors.redAccent)
+      home: Scaffold(
+          appBar: AppBar(
+            leading: Icon(Icons.dangerous),
+            title: Text('Carrot Market'),
+            actions: [
+              Icon(Icons.bento),
+              Icon(Icons.menu),
+              Icon(Icons.more_vert)
+            ],
           ),
-          child: Text('Text in box'),
-        ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-          child: Container(
-        width: double.infinity,
-        height: 55,
-        decoration: BoxDecoration(
-            border:
-                Border(top: BorderSide(color: Theme.of(context).dividerColor))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.phone),
-            Icon(Icons.message),
-            Icon(Icons.contact_page),
-          ],
-        ),
-      )),
-    ));
+          body: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                        width: 100,
+                        height: 100,
+                        child: Image.asset('assets/daeyoon.jpg')),
+                    Column(children: [
+                      Text(
+                        '김대윤',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '서울시 서초구',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                          Text(
+                            '// 끌올 10분 전',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                        ],
+                      )
+                    ]),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.heart_broken,
+                          color: Colors.grey,
+                        ),
+                        Text('4')
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                        width: 100,
+                        height: 100,
+                        child: Image.asset('assets/daeyoon.jpg')),
+                    Column(children: [
+                      Text(
+                        '김대윤',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '서울시 서초구',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                          Text(
+                            '// 끌올 10분 전',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                        ],
+                      )
+                    ]),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.heart_broken,
+                          color: Colors.grey,
+                        ),
+                        Text('4')
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          )),
+    );
   }
 }
