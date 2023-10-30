@@ -20,94 +20,32 @@ class MyApp extends StatelessWidget {
               Icon(Icons.more_vert)
             ],
           ),
-          body: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        child: Image.asset('assets/daeyoon.jpg')),
-                    Column(children: [
-                      Text(
-                        '김대윤',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ),
+          body: Container(
+            padding: EdgeInsets.all(10),
+            height: 100,
+            child: Row(
+              children: [
+                Image.asset('assets/daeyoon.jpg', width: 100,),
+                Container(
+                  width: 300,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('김대윤'),
+                      Text('서울시 서초구'),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            '서울시 서초구',
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
-                          ),
-                          Text(
-                            '// 끌올 10분 전',
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
-                          ),
+                          Icon(Icons.favorite),
+                          Text('4'),
                         ],
                       )
-                    ]),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.heart_broken,
-                          color: Colors.grey,
-                        ),
-                        Text('4')
-                      ],
-                    )
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        child: Image.asset('assets/daeyoon.jpg')),
-                    Column(children: [
-                      Text(
-                        '김대윤',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            '서울시 서초구',
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
-                          ),
-                          Text(
-                            '// 끌올 10분 전',
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
-                          ),
-                        ],
-                      )
-                    ]),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.heart_broken,
-                          color: Colors.grey,
-                        ),
-                        Text('4')
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ],
-          )),
-    );
+              ],
+            ),
+          ),
+      ));
   }
 }
